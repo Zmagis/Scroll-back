@@ -8,6 +8,8 @@ const API_KEY = process.env.FLICKR_API_KEY;
 
 let flickr = new Flickr(API_KEY);
 
+app.get('/', () => console.log('Main'));
+
 app.get('/data', (req, res) => {
   console.log('REQUEST!!!!!!!!!!!!!!!!!!!!', Object.keys(req));
   const page = req.query['0'];
